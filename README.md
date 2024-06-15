@@ -1,5 +1,5 @@
 ## useReducer
-• useReducer is a hook in React ✅
+• useReducer is a hook in React ✅ <br>
 • Practicing useState, filter, map, form, props and destructuring ✅
 
 ## Screenshots 📱
