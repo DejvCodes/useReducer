@@ -6,7 +6,7 @@ const Modal = ({notifText, closeNotif}) => {
     const timer = setTimeout(() => {
       closeNotif()
     }, 2000);
-    // Cleanup funkce
+    // CleanUp funkce
     return () => clearTimeout(timer); 
   })
 
