@@ -78,7 +78,7 @@ const App = () => {
   }
 
   const deleteUser = (id) => {
-    dispatch({type: "DELETE_USER", payload: id})
+    dispatch({type: "DELETE_USER", payload: id}) 
   }
 
   return (
