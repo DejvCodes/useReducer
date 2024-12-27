@@ -65,34 +65,34 @@ const App = () => {
 
     // Validace
     if (userName.trim()) {
-      const newUser = {id: new Date().getTime(), name: userName}
-      dispatch({type: "ADD_USER", payload: newUser})
+      const newUser = { id: new Date().getTime(), name: userName }
+      dispatch({ type: "ADD_USER", payload: newUser })
     } else {
-      dispatch({type: "NO_USER_NAME"})
+      dispatch({ type: "NO_USER_NAME" })
     }
     setUserName("")
   }
 
   const closeNotification = () => {
-    dispatch({type: "CLOSE_NOTIFICATION"})
+    dispatch({ type: "CLOSE_NOTIFICATION" })
   }
 
   const deleteUser = (id) => {
-    dispatch({type: "DELETE_USER", payload: id}) 
+    dispatch({ type: "DELETE_USER", payload: id })
   }
 
   return (
     <div className="container">
       <div className="notification">
-        {state.showNotification && <Modal 
-          notifText={state.notificationText} 
+        {state.showNotification && <Modal
+          notifText={state.notificationText}
           closeNotif={closeNotification}
         />}
       </div>
-      
+
       <form onSubmit={formSubmit}>
-        <input 
-          type="text" 
+        <input
+          type="text"
           placeholder="Zadejte uživatele"
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
